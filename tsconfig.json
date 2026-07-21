@@ -11,7 +11,10 @@
     "noEmit": true,
     "allowImportingTsExtensions": true,
     "skipLibCheck": true,
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "paths": {
+      "@wllama/wllama": ["./node_modules/@wllama/wllama/esm/index"]
+    }
   },
   "include": ["src", "tests"]
 }
