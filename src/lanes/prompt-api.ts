@@ -23,7 +23,7 @@ export const promptApiLane: LaneDefinition = {
       lane: "prompt-api",
       availability: availability === "available" ? "ready" : "needs-download",
       model: MODEL,
-      downloadBytes: 0,
+      downloadBytes: availability === "available" ? 0 : null,
     }
   },
 

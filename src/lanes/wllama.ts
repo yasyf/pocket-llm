@@ -1,4 +1,4 @@
-import type { ChatCompletionMessage } from "@wllama/wllama"
+import type { ChatCompletionMessage } from "@wllama/wllama/esm/index.js"
 
 import type { CreateSessionOptions, Detection, DetectOptions, LaneDefinition, Session, WllamaModelSource } from "../types.ts"
 
@@ -39,7 +39,7 @@ export const wllamaLane: LaneDefinition = {
         'the wllama lane requires WebAssembly asset URLs; pass createSession({ assets: { wllama: { default: "<url to wllama.wasm>" } } })',
       )
     }
-    const { Wllama } = await import("@wllama/wllama")
+    const { Wllama } = await import("@wllama/wllama/esm/index.js")
     const { system, responseSchema, onProgress } = options
     const wllama = new Wllama(assets)
     await wllama.loadModelFromHF(options.models?.wllama ?? DEFAULT_MODEL, {

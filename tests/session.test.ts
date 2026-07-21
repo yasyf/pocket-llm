@@ -34,7 +34,7 @@ function mockWebllm(onCreate: (request: ChatRequest) => string): void {
 }
 
 function mockWllama(onCreate: (request: ChatRequest) => string): void {
-  mock.module("@wllama/wllama", () => ({
+  mock.module("@wllama/wllama/esm/index.js", () => ({
     Wllama: class {
       async loadModelFromHF(): Promise<void> {}
       async createChatCompletion(request: ChatRequest) {

@@ -17,9 +17,9 @@ test("prompt-api wins when LanguageModel is available, even with a GPU present",
   })
 })
 
-test("a downloadable Prompt API model reports needs-download with zero bytes", async () => {
+test("a downloadable Prompt API model reports needs-download with unknown size", async () => {
   setLanguageModel("downloadable")
-  expect(await detect()).toMatchObject({ lane: "prompt-api", availability: "needs-download", downloadBytes: 0 })
+  expect(await detect()).toMatchObject({ lane: "prompt-api", availability: "needs-download", downloadBytes: null })
 })
 
 test("an unavailable Prompt API falls through to the next lane", async () => {

@@ -40,6 +40,12 @@ jobs:
           node-version: lts/*
           registry-url: https://registry.npmjs.org
       - run: npm install -g npm@latest
+      - name: Verify tag matches package.json version
+        run: |
+          PKG=$(node -p "require('./package.json').version")
+          TAG="${GITHUB_REF_NAME#v}"
+          [ "$PKG" = "$TAG" ] \
+            || { echo "::error::Tag ${{ github.ref_name }} (=$TAG) does not match package.json version $PKG; refusing to publish."; exit 1; }
       - run: bun install --frozen-lockfile
       - run: bun run typecheck
       - run: bun test
