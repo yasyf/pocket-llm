@@ -4,11 +4,33 @@
   "description": "On-device LLM sessions for any browser — Chrome's Prompt API, WebLLM, or wllama, picked by feature detection, smallest model first.",
   "license": "PolyForm-Noncommercial-1.0.0",
   "author": "Yasyf Mohamedali <yasyfm@gmail.com>",
+  "homepage": "https://github.com/yasyf/pocket-llm",
   "repository": "github:yasyf/pocket-llm",
+  "bugs": "https://github.com/yasyf/pocket-llm/issues",
+  "keywords": [
+    "llm",
+    "webllm",
+    "wllama",
+    "prompt-api",
+    "webgpu",
+    "wasm",
+    "on-device",
+    "browser"
+  ],
   "type": "module",
-  "private": true,
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "start": "bun run src/index.ts",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "test": "bun test"
   },
