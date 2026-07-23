@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-07-23
+
+### Changed
+- First release published through the tag-driven trusted-publishing workflow (OIDC provenance). No library changes.
+
 ## [0.1.0] - 2026-07-23
 
 ### Added
@@ -15,5 +20,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Per-lane model overrides, consumer-supplied wllama wasm asset URLs (no hardcoded CDN), and lane forcing via `lanes`.
 - Tag-driven npm release workflow using OIDC trusted publishing with provenance.
 
-[Unreleased]: https://github.com/yasyf/pocket-llm/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/yasyf/pocket-llm/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/yasyf/pocket-llm/releases/tag/v0.1.1
 [0.1.0]: https://github.com/yasyf/pocket-llm/releases/tag/v0.1.0

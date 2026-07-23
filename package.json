@@ -1,7 +1,7 @@
 {
   "name": "pocket-llm",
-  "version": "0.1.0",
-  "description": "On-device LLM sessions for any browser — Chrome's Prompt API, WebLLM, or wllama, picked by feature detection, smallest model first.",
+  "version": "0.1.1",
+  "description": "On-device LLM sessions for any browser \u2014 Chrome's Prompt API, WebLLM, or wllama, picked by feature detection, smallest model first.",
   "license": "PolyForm-Noncommercial-1.0.0",
   "author": "Yasyf Mohamedali <yasyfm@gmail.com>",
   "homepage": "https://github.com/yasyf/pocket-llm",
